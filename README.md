@@ -11,7 +11,7 @@ Homepage to see list of current or past trips.
 
 Stretch: Ability to add friends, and select a friends profile when adding trip members. Ability to add pictures to user profile. Ability for multiple users to be connected to and editing the same trip (viewing total trip expenses, even if added by another user).  Connect venmo so each person can repay their friends. 
 
-#UI
+#**UI**
 - User Interfaces 1 - 3
 - Git for Web Development
 - Responsive Design 1 - 2
@@ -33,7 +33,7 @@ For your project this week, you will demonstrate proficiency by working with a g
 - [ ]  For a second page, you could do an about us section that includes images of the members of your team, and links to one another's socials/Github.
 
 
-#Front-End
+#**Front-End**
 - Functional Components 1 - 2
 - Class Components 1-2
 - React Tooling
@@ -51,7 +51,7 @@ For your project this week, you will demonstrate proficiency by working with a g
 
 You will use your skills to be responsible for the Front End Architecture of this project. You will work directly with the UI Developer and the Back End Developer to ensure that all React components are wired up in proper fashion.
 
-#Back-End
+#**Back-End**
 - Building RESTful Web APIs with Express and Node.js
 - Server-side Routing`,`Express Middleware
 - Deployment and Good Practices
