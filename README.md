@@ -51,6 +51,16 @@ For your project this week, you will demonstrate proficiency by working with a g
 
 You will use your skills to be responsible for the Front End Architecture of this project. You will work directly with the UI Developer and the Back End Developer to ensure that all React components are wired up in proper fashion.
 
+const User = {
+   id: 1,
+   username: 'kingofgames',
+   first_name: 'Yugi',
+   last_name: 'Muto'
+   gender: 'male'
+   tripsOwned: ['disney', 'roadtrip'] 
+   tripsMemberOf: ['']
+ },
+
 #**Back-End**
 - Building RESTful Web APIs with Express and Node.js
 - Server-side Routing`,`Express Middleware
