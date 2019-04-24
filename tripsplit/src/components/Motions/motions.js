@@ -16,4 +16,4 @@ export const hideLogin = () =>{
     
     return TweenMax.fromTo(form, .3, {opacity:"1"}, {opacity:"0", display: "none", onComplete: tween});
 
-}
+} 
