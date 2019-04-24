@@ -1,9 +1,72 @@
-#h1 {
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  font-size: 62.5%;
+}
+.content {
+  margin: 12.5% auto 12.5% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content #h1 {
+  font-size: 5rem;
+}
+.content .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+.content .action-buttons #login,
+.content .action-buttons #sign-up {
+  background-color: blue;
+  color: white;
+  padding: 2% 10%;
+  font-size: 1.5rem;
+  font-weight: 800;
+  width: 40%;
+}
+.content .login-form {
+  width: 50%;
+  border-bottom: 2px solid lightgrey;
+  padding-bottom: 2%;
+}
+.content .login-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.content .login-form form #username {
+  margin: 2%;
+  width: 60%;
+  padding: 2%;
+}
+.content .login-form form #password {
+  margin: 2%;
+  width: 60%;
+  padding: 2%;
+}
+.content .login-form form .form-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.content .login-form form .form-buttons #submitbutton {
+  background-color: transparent;
   color: blue;
+  border: 1px solid blue;
+  padding: 1% 4%;
 }
-.test {
-  color: green;
-}
-.test p {
-  color: orange;
+.content .login-form form .form-buttons #cancel {
+  background-color: transparent;
+  color: blue;
+  border: 1px solid blue;
+  padding: 1% 4%;
 }

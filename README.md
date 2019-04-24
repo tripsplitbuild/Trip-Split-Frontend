@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Trip-Split
-=======
 # Trip Split
 
 Pitch: Tired of paying for a friends uber ride or lunch while on vacation and never getting paid back? Trip split saves the day by keeping track and telling each person they owe money.
@@ -73,4 +70,3 @@ You will use your skills to be responsible for the Front End Architecture of thi
 ## **Your primary role as a Back-end Architect**
 
 You will use your skills to be responsible for the back-end architecture of this project. You will work closely with your Front End Architect and your Scrum Master in order to discover project needs and deliver working Endpoints for your application.
->>>>>>> dd16c16076b9f666c219910ad08c1378b2e7a983
