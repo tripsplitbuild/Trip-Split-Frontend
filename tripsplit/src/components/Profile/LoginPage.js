@@ -14,8 +14,8 @@ export default class LoginPage extends Component{
                 password: ''
             }
         }
-    }
-
+    } 
+    
     render(){
         return(
             <div>
