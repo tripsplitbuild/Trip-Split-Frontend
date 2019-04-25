@@ -85,7 +85,7 @@ export default class ExpenseTrip extends Component{
                                 <div className='total'>{expense.expenseTotal}</div>
                             )
                         })}
-                        </div>
+                        </div> 
                 </div>
                 <div className='member-contributions' style={{display:'none'}}>
                         <h3>Member Contributions</h3>
