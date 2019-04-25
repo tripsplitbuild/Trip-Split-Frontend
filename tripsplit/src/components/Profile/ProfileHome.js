@@ -63,7 +63,7 @@ export default class ProfileHome extends Component{
                             return(
                                 <ul>
                                     <li>{tripM}</li>
-                                    <p>Total Expenses: $1,280.72</p>
+                                    <p>Total Expenses: $1,280.72</p> 
                                     <button>Trip Details</button>
                                 </ul>
                             )
