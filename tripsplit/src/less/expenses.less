@@ -1,0 +1,63 @@
+#expense-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .expense-list{
+        display: grid;
+        width: 80%;
+        padding: 2%;
+        border: 1px solid blue;
+        font-size: 1rem;
+        margin-top: 1%;     
+        #expense-name{
+            text-align: center;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            text-decoration: underline;
+            .expense{
+                grid-row-start: 2;
+                grid-row-end: 2;
+                grid-column-start: 2;
+                grid-column-end: 2;
+            }
+        }
+        #expense-total{
+            text-align: center;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            grid-column-start: 3;
+            grid-column-end: 3;
+            text-decoration: underline;
+            .total{
+                grid-row-start: 2;
+                grid-row-end: 2;
+                grid-column-start: 3;
+                grid-column-end: 3;
+            }
+            
+        }
+    }
+    .member-contributions{
+        font-size: 1rem;
+        border: 1px solid red;
+        width: 80%;
+        padding: 1%;
+        h3{
+            float: left;
+        }
+
+        .member{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            text-align: left;
+        }
+        .contribution{
+            grid-column-start: 2;
+            grid-column-end: 2;
+            text-align: left;
+        }
+    }
+}

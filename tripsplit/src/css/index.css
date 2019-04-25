@@ -15,6 +15,11 @@ html {
 .content #h1 {
   font-size: 5rem;
 }
+.content a {
+  color: grey;
+  text-decoration: none;
+  font-size: 1rem;
+}
 .content .action-buttons {
   display: flex;
   justify-content: space-between;
@@ -69,4 +74,243 @@ html {
   color: blue;
   border: 1px solid blue;
   padding: 1% 4%;
+}
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  border-bottom: 1px solid grey;
+}
+.header h1 {
+  font-size: 4rem;
+}
+.header h3 {
+  font-size: 1rem;
+}
+.trip-data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.trip-data .trip-owned {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  width: 48%;
+}
+.trip-data .trip-owned h4 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+.trip-data .trip-owned ul li {
+  font-size: 1.3rem;
+}
+.trip-data .trip-owned ul p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.trip-data .trip-owned ul button {
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 2%;
+  padding: 2% 4%;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 60%;
+}
+.trip-data .trip-owned ul button:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.trip-data .trip-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  width: 48%;
+}
+.trip-data .trip-member h4 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+.trip-data .trip-member ul li {
+  font-size: 1.3rem;
+}
+.trip-data .trip-member ul p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.trip-data .trip-member ul button {
+  background-color: transparent;
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 2%;
+  padding: 2% 4%;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 60%;
+}
+.trip-data .trip-member ul button:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.trip {
+  border: 2px solid green;
+}
+.trip .trip-data {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid blue;
+}
+.trip .trip-data .members {
+  float: left;
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  width: 25%;
+}
+.trip .trip-data .members h4 {
+  font-size: 1.5rem;
+}
+.trip .trip-data .members li {
+  font-size: 1.3rem;
+  padding-bottom: 4%;
+}
+.trip .trip-data .members button {
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 2%;
+  padding: 2% 4%;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 40%;
+}
+.trip .trip-data .members button:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.trip .trip-data .trip-expenses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.trip .trip-data .trip-expenses h4 {
+  font-size: 1.5rem;
+}
+.trip .trip-data .trip-expenses .expenses {
+  border: 2px solid red;
+  width: 95%;
+}
+.trip .trip-data .trip-expenses .expenses #expense-table th {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 2%;
+}
+.trip .trip-data .trip-expenses .expenses #expense-table td {
+  font-size: 1.3rem;
+}
+.trip .trip-data .trip-expenses button {
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 2%;
+  padding: 1% 4%;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 30%;
+}
+.trip .trip-data .trip-expenses button:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.trip #close-button {
+  border: 1px solid black;
+}
+.trip #close-button button {
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 2%;
+  padding: 1% 1%;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 10%;
+  margin: 0 auto;
+}
+.trip #close-button button:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+#expense-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#expense-data .expense-list {
+  display: grid;
+  width: 80%;
+  padding: 2%;
+  border: 1px solid blue;
+  font-size: 1rem;
+  margin-top: 1%;
+}
+#expense-data .expense-list #expense-name {
+  text-align: center;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  text-decoration: underline;
+}
+#expense-data .expense-list #expense-name .expense {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+#expense-data .expense-list #expense-total {
+  text-align: center;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  text-decoration: underline;
+}
+#expense-data .expense-list #expense-total .total {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+#expense-data .member-contributions {
+  font-size: 1rem;
+  border: 1px solid red;
+  width: 80%;
+  padding: 1%;
+}
+#expense-data .member-contributions h3 {
+  float: left;
+}
+#expense-data .member-contributions .member {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  text-align: left;
+}
+#expense-data .member-contributions .contribution {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  text-align: left;
 }

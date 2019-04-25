@@ -1,0 +1,93 @@
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    border-bottom: 1px solid grey;
+    h1{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+}
+
+.trip-data{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .trip-owned{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid blue;
+        width: 48%;
+        h4{
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        ul{
+            li{
+                font-size: 1.3rem;
+            }
+            p{
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+            button{
+                color: blue;
+                border: 1px solid blue;
+                border-radius: 2%;
+                padding: 2% 4%;
+                font-size: 1rem;
+                font-weight: 500;
+                width: 60%;
+            }
+            button:hover{
+                background-color: blue;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    .trip-member{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid blue;
+        width: 48%;
+                
+        h4{
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        ul{
+            li{
+                font-size: 1.3rem;
+            }
+            p{
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+            button{
+                background-color: transparent;
+                color: blue;
+                border: 1px solid blue;
+                border-radius: 2%;
+                padding: 2% 4%;
+                font-size: 1rem;
+                font-weight: 500;
+                width: 60%;
+            }
+            button:hover{
+                background-color: blue;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
