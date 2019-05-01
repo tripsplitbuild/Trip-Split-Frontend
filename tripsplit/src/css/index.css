@@ -1,79 +1,204 @@
 * {
   box-sizing: border-box;
 }
-body,
 html {
+  background-image: url('../img/Desktop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width: 98vw;
+}
+body {
   font-size: 62.5%;
+  width: 100%;
 }
 .content {
-  margin: 12.5% auto 12.5% auto;
+  margin: 0% auto 2% auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.content #h1 {
-  font-size: 5rem;
+.content .header {
+  display: flex;
+  width: 98%;
+  padding: 0% 1%;
 }
-.content a {
+.content .header #title {
+  width: 20%;
+}
+.content .header a {
   color: grey;
   text-decoration: none;
   font-size: 1rem;
 }
-.content .action-buttons {
+.content .header .action-buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 50%;
 }
-.content .action-buttons #login,
-.content .action-buttons #sign-up {
-  background-color: blue;
+.content .header .action-buttons #login,
+.content .header .action-buttons #sign-up {
   color: white;
   padding: 2% 10%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 800;
   width: 40%;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
 }
-.content .login-form {
+.content .content-area {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.content .content-area .carousel {
+  width: 800px;
+  height: 550px;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0 2%;
+  margin: 0 auto;
+}
+.content .content-area .form-area {
+  width: 60%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid white;
+  margin-top: 1%;
+}
+.content .content-area .form-area .login-form {
   width: 50%;
-  border-bottom: 2px solid lightgrey;
   padding-bottom: 2%;
 }
-.content .login-form form {
+.content .content-area .form-area .login-form form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: none;
 }
-.content .login-form form #username {
+.content .content-area .form-area .login-form form #username {
   margin: 2%;
   width: 60%;
   padding: 2%;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
 }
-.content .login-form form #password {
+.content .content-area .form-area .login-form form #password {
   margin: 2%;
   width: 60%;
   padding: 2%;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
 }
-.content .login-form form .form-buttons {
+.content .content-area .form-area .login-form form .form-buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
 }
-.content .login-form form .form-buttons #submitbutton {
+.content .content-area .form-area .login-form form .form-buttons #submitbutton {
   background-color: transparent;
   color: blue;
-  border: 1px solid blue;
   padding: 1% 4%;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
 }
-.content .login-form form .form-buttons #cancel {
+.content .content-area .form-area .login-form form .form-buttons #cancel {
   background-color: transparent;
   color: blue;
-  border: 1px solid blue;
   padding: 1% 4%;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.content .content-area .form-area .registration-form {
+  width: 60%;
+}
+.content .content-area .form-area .registration-form form {
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+.content .content-area .form-area .registration-form form input {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2%;
+  margin-bottom: 1.5%;
+  color: white;
+  font-weight: bold;
+}
+.content .content-area .form-area .registration-form form .mid-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .content-area .form-area .registration-form form .mid-form #gender-select {
+  display: flex;
+}
+.content .content-area .form-area .registration-form form .mid-form #gender-select #gender {
+  font-size: 1rem;
+  width: 45%;
+  height: inherit;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.content .content-area .form-area .registration-form form .mid-form #select-avatar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+.content .content-area .form-area .registration-form form .mid-form #select-avatar #avatar {
+  width: 50px;
+  height: 50px;
+}
+.content .content-area .form-area .registration-form form .mid-form #select-avatar #button-area {
+  display: flex;
+}
+.content .content-area .form-area .registration-form form .mid-form #select-avatar #button-area #selectAva {
+  width: 70%;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.content .content-area .form-area .registration-form form .mid-form p {
+  font-size: .8rem;
+  color: white;
+}
+.content .content-area .form-area .registration-form form .registration-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  padding: 2% 0%;
+}
+.content .content-area .form-area .registration-form form .registration-buttons #register {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.content .content-area .form-area .registration-form form .registration-buttons #cancel {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 .header {
   display: flex;
@@ -81,7 +206,6 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  border-bottom: 1px solid grey;
 }
 .header h1 {
   font-size: 4rem;

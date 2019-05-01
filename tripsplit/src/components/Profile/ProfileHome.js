@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import '../../css/index.css';
 import Trip from '../Trip/Trip';
+import {connect} from 'react-redux';
+import axios from 'axios';
 
 
-export default class ProfileHome extends Component{
+class ProfileHome extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -21,20 +23,31 @@ export default class ProfileHome extends Component{
 }
 
     componentDidMount(){
-        this.setState(
-            {
-                user:{
-                    id: 1,
-                    username: 'kingofgames',
-                    first_name: 'Yugi',
-                    last_name: 'Muto',
-                    gender: 'male',
-                    tripsOwned: ['disney', 'roadtrip'], 
-                    tripsMemberOf: ['lake tahoe', 'vegas']
-                }
+        const token= localStorage.getItem('jwt');
+        const reqOptions = {
+            headers:{
+                Authorization: token
             }
-        )
-    }
+        }
+        console.log(this.props.credentials.id)
+       axios.get(`http://localhost:9090/users/7`, reqOptions)
+       .then(res => {
+    //     this.setState({
+    //        user: {
+    //            id: this.props.credentials.id,
+    //            username: res.data.username,
+    //            first_name: res.data.first_name,
+    //            last_name: res.data.last_name,
+    //            gender: res.data.gender,
+    //            ownedTrips: res.data.ownedTrips,
+    //            memberTrips: res.data.ownedTrips  
+
+    //        }
+    //    })
+        return console.log('hi')})
+       .catch(err => console.log(err))
+       //console.log(this.props.credentials.id)
+     }
 
     render(){
         return(
@@ -74,3 +87,16 @@ export default class ProfileHome extends Component{
         )
     }
 }
+
+const mapStateToProps = state =>{
+    return{
+      isRegistering: state.isRegistering,
+      isLoggedIn: state.isLoggedIn,
+      credentials: state.credentials
+    };
+  };
+  
+  export default connect(
+    mapStateToProps,
+    {}
+  )(ProfileHome);
