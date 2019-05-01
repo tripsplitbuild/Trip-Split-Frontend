@@ -76,7 +76,7 @@ class LoginPage extends Component{
       }
       console.log(credentials);
       console.log(this.props)
-      this.props.login(credentials).then(()=>this.props.history.push('/profile/7'))
+      this.props.login(credentials).then(()=>this.props.history.push('/profile'))
     }
 
     componentDidMount(){

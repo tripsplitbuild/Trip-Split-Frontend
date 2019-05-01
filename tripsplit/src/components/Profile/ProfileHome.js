@@ -16,38 +16,32 @@ class ProfileHome extends Component{
                 first_name: '',
                 last_name: '',
                 gender: '',
-                tripsOwned: [], 
-                tripsMemberOf: []            
+                ownedTrips: [], 
+                memberTrips: []            
         }
     }//constructor
 }
 
     componentDidMount(){
-        const token= localStorage.getItem('jwt');
-        const reqOptions = {
-            headers:{
-                Authorization: token
-            }
-        }
+       
         console.log(this.props.credentials.id)
-       axios.get(`http://localhost:9090/users/7`, reqOptions)
-       .then(res => {
-    //     this.setState({
-    //        user: {
-    //            id: this.props.credentials.id,
-    //            username: res.data.username,
-    //            first_name: res.data.first_name,
-    //            last_name: res.data.last_name,
-    //            gender: res.data.gender,
-    //            ownedTrips: res.data.ownedTrips,
-    //            memberTrips: res.data.ownedTrips  
-
-    //        }
-    //    })
-        return console.log('hi')})
-       .catch(err => console.log(err))
+       axios.get(`http://localhost:9090/users/${this.props.credentials.id}`, {
+        headers: { Authorization: localStorage.getItem("token") }})
+       .then((res) => {
+        return this.setState({
+            user: {
+                id: this.props.credentials.id,
+                username: res.data.username,
+                first_name: res.data.first_name,
+                last_name: res.data.last_name,
+                gender: res.data.gender,
+                ownedTrips: res.data.ownedTrips,
+                memberTrips: res.data.memberTrips}}
+        ),     
+         console.log(this.state.user)})
+       .catch(err => console.log(err))}
        //console.log(this.props.credentials.id)
-     }
+     
 
     render(){
         return(
@@ -60,19 +54,20 @@ class ProfileHome extends Component{
                 <div className="trip-data">
                     <div className="trip-owned">
                         <h4>Trips You Created</h4>
-                        {this.state.user.tripsOwned.map(tripO =>{
+                        {this.state.user.ownedTrips.map((tripO,index) =>{
                             return(
-                                <ul>
-                                    <li>{tripO}</li>
+                                <ul key={index}>
+                                    <li>{tripO.trip_name}</li>
                                     <p>Total Expenses: $1,280.72</p>
                                     <Link to="/profile/trip"><button>Trip Details</button></Link>
                                 </ul>
-                            )
+                            ) 
+                            console.log(tripO)
                         })}
                     </div>
                     <div className="trip-member">
                         <h4>Trips You're A Member Of</h4>
-                        {this.state.user.tripsMemberOf.map(tripM =>{
+                        {this.state.user.memberTrips.map(tripM =>{
                             return(
                                 <ul>
                                     <li>{tripM}</li>

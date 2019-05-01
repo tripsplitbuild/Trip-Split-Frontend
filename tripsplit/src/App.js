@@ -16,7 +16,7 @@ export default class App extends Component {
       return(
         <Router>
           <Route exact={true} path="/" component={LoginPage}/>
-          <Route exact={true} path="/profile/7" component={ProfileHome}></Route>
+          <Route exact={true} path="/profile" component={ProfileHome}></Route>
           <Route exact={true} path="/profile/trip" component={Trip}></Route>
           <Route exact={true} path="/profile/trip/expenses" component={ExpenseTrip}></Route>
         </Router>
