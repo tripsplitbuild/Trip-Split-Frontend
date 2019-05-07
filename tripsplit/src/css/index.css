@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Righteous', cursive;
 }
 html {
   background-image: url('../img/Desktop.png');
@@ -12,6 +13,21 @@ html {
 body {
   font-size: 62.5%;
   width: 100%;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body p {
+  font-family: 'Righteous', cursive;
+  color: white;
+}
+body button {
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .content {
   margin: 0% auto 2% auto;
@@ -91,17 +107,19 @@ body {
 }
 .content .content-area .form-area .login-form form #username {
   margin: 2%;
-  width: 60%;
+  width: 80%;
   padding: 2%;
   border: 1px solid white;
   background-color: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 .content .content-area .form-area .login-form form #password {
   margin: 2%;
-  width: 60%;
+  width: 80%;
   padding: 2%;
   border: 1px solid white;
   background-color: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 .content .content-area .form-area .login-form form .form-buttons {
   display: flex;
@@ -111,15 +129,15 @@ body {
 }
 .content .content-area .form-area .login-form form .form-buttons #submitbutton {
   background-color: transparent;
-  color: blue;
-  padding: 1% 4%;
+  color: white;
+  padding: 2% 4%;
   border: 1px solid white;
   background-color: rgba(255, 255, 255, 0.2);
 }
 .content .content-area .form-area .login-form form .form-buttons #cancel {
   background-color: transparent;
-  color: blue;
-  padding: 1% 4%;
+  color: white;
+  padding: 2% 4%;
   border: 1px solid white;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -205,13 +223,32 @@ body {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 1%;
+  border-bottom: 1px solid white;
 }
 .header h1 {
-  font-size: 4rem;
+  width: 100%;
+  font-size: 3rem;
+  color: white;
 }
 .header h3 {
   font-size: 1rem;
+  color: white;
+}
+.create-trip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.create-trip button {
+  color: white;
+  padding: 1% 5%;
+  font-size: 1rem;
+  font-weight: 800;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 .trip-data {
   display: flex;
@@ -223,7 +260,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
   width: 48%;
 }
 .trip-data .trip-owned h4 {
@@ -238,25 +274,19 @@ body {
   font-style: italic;
 }
 .trip-data .trip-owned ul button {
-  color: blue;
-  border: 1px solid blue;
+  color: white;
+  border: 1px solid white;
   border-radius: 2%;
   padding: 2% 4%;
   font-size: 1rem;
   font-weight: 500;
   width: 60%;
 }
-.trip-data .trip-owned ul button:hover {
-  background-color: blue;
-  color: white;
-  cursor: pointer;
-}
 .trip-data .trip-member {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
   width: 48%;
 }
 .trip-data .trip-member h4 {
@@ -272,18 +302,54 @@ body {
 }
 .trip-data .trip-member ul button {
   background-color: transparent;
-  color: blue;
-  border: 1px solid blue;
+  color: white;
+  border: 1px solid white;
   border-radius: 2%;
   padding: 2% 4%;
   font-size: 1rem;
   font-weight: 500;
   width: 60%;
 }
-.trip-data .trip-member ul button:hover {
-  background-color: blue;
+span {
+  width: 100%;
+}
+span div {
+  width: 100%;
+}
+span div .new-trip {
+  width: 100%;
+}
+span div .new-trip .create-form {
+  width: 100%;
+  display: none;
+}
+span div .new-trip .create-form form {
+  width: 100%;
+}
+span div .new-trip .create-form form .create-actions {
+  padding: 2% 0%;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+span div .new-trip .create-form form .create-actions #tripname {
+  width: 40%;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
-  cursor: pointer;
+}
+span div .new-trip .create-form form .newMembers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+span div .new-trip .create-form form .newMembers .add-member {
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 .trip {
   border: 2px solid green;
@@ -305,6 +371,12 @@ body {
 }
 .trip .trip-data .members h4 {
   font-size: 1.5rem;
+}
+.trip .trip-data .members .newMembers {
+  display: none;
+}
+.trip .trip-data .members .newMembers .add-member {
+  display: none;
 }
 .trip .trip-data .members li {
   font-size: 1.3rem;
@@ -384,49 +456,70 @@ body {
   align-items: center;
 }
 #expense-data .expense-list {
-  display: grid;
+  display: flex;
+  justify-content: space-around;
   width: 80%;
   padding: 2%;
   border: 1px solid blue;
   font-size: 1rem;
   margin-top: 1%;
 }
-#expense-data .expense-list #expense-name {
+#expense-data .expense-list #expense-titles {
+  display: grid;
   text-align: center;
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 1;
   grid-column-end: 1;
   text-decoration: underline;
+  border: 1px solid white;
 }
-#expense-data .expense-list #expense-name .expense {
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 2;
-}
-#expense-data .expense-list #expense-total {
-  text-align: center;
+#expense-data .expense-list #expense-titles h4 {
   grid-row-start: 1;
   grid-row-end: 1;
-  grid-column-start: 3;
-  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
   text-decoration: underline;
+  border: 1px solid white;
 }
-#expense-data .expense-list #expense-total .total {
-  grid-row-start: 2;
-  grid-row-end: 2;
+#expense-data .expense-list #expense-titles .expense {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  border: 1px solid red;
+}
+#expense-data .expense-list #expense-totals {
+  display: grid;
+  text-align: center;
+}
+#expense-data .expense-list #expense-totals .totals {
   grid-column-start: 3;
   grid-column-end: 3;
+  border: 1px solid black;
 }
 #expense-data .member-contributions {
   font-size: 1rem;
   border: 1px solid red;
   width: 80%;
   padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #expense-data .member-contributions h3 {
-  float: left;
+  margin: 0 auto;
+}
+#expense-data .member-contributions .contribution-list {
+  display: flex;
+}
+#expense-data .member-contributions .contribution-list form {
+  display: flex;
+}
+#expense-data .member-contributions .contribution-list .add-member form {
+  display: none;
+}
+#expense-data .member-contributions #submit-changes {
+  width: 25%;
 }
 #expense-data .member-contributions .member {
   grid-column-start: 1;

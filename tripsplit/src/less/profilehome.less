@@ -3,14 +3,37 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 1%;
-   
+    //padding: 1%;
+    border-bottom: 1px solid white;
     h1{
-        font-size: 4rem;
+        width: 100%;        
+        font-size: 3rem;
+        color: white;
+        //padding: 2% 0%;
     }
     h3{
         font-size: 1rem;
+        color: white;
     }
+}
+.create-trip{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    button{
+        color: white;
+        padding: 1% 5%;
+        font-size: 1rem;
+        font-weight: 800;
+        //width: 100%;
+        border: 1px solid white;
+        background-color: rgba(255,255,255, .2) ; 
+        text-align: center;
+    }
+    
 }
 
 .trip-data{
@@ -22,7 +45,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid blue;
         width: 48%;
         h4{
             font-size: 1.5rem;
@@ -37,18 +59,13 @@
                 font-style: italic;
             }
             button{
-                color: blue;
-                border: 1px solid blue;
+                color: white;
+                border: 1px solid white;
                 border-radius: 2%;
                 padding: 2% 4%;
                 font-size: 1rem;
                 font-weight: 500;
                 width: 60%;
-            }
-            button:hover{
-                background-color: blue;
-                color: white;
-                cursor: pointer;
             }
         }
     }
@@ -57,9 +74,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid blue;
-        width: 48%;
-                
+        width: 48%;                
         h4{
             font-size: 1.5rem;
             text-decoration: underline;
@@ -74,18 +89,13 @@
             }
             button{
                 background-color: transparent;
-                color: blue;
-                border: 1px solid blue;
+                color: white;
+                border: 1px solid white;
                 border-radius: 2%;
                 padding: 2% 4%;
                 font-size: 1rem;
                 font-weight: 500;
                 width: 60%;
-            }
-            button:hover{
-                background-color: blue;
-                color: white;
-                cursor: pointer;
             }
         }
     }

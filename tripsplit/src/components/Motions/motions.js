@@ -20,6 +20,7 @@ import img28 from '../../img/28.jpg';import img50 from '../../img/50.jpg'; impor
 import img34 from '../../img/34.jpg';import img15 from '../../img/15.jpg';import img60 from '../../img/60.jpg';
 import img52 from '../../img/52.jpg';import img9 from '../../img/9.jpg';import img39 from '../../img/39.jpg';
 import img45 from '../../img/45.jpg';import img23 from '../../img/23.jpg';import img3 from '../../img/3.jpg';
+import { create } from 'domain';
 
 const imageArray = [img3,img57,img17,img46,img21,img33,img43,img24,img5,img13,
     img7,img19,img2,img6,img12,img48,img14,img20,img54,img40,
@@ -67,18 +68,29 @@ export const hideRegister = () =>{
 }
 
 export const background = () =>{
-    const page = document.querySelector('.carousel')
-     
+    const page = document.querySelector('.carousel')     
     let image = () => {
         let index = Math.floor(Math.random() * 60); 
-        //console.log(index)
         page.style.backgroundImage = `url(${imageArray[index]})`;
      }
     let display = new TimelineMax({repeat:500, repeatDelay:0}); 
     display.add(TweenLite.fromTo(page, 4, {opacity:'0'}, {opacity:'.8', filter: 'blur(.5px)', onComplete: image}));
-
-
     return display;
 }
 
-//backgroundImage: `url(${image()})`
+export const showAdd = (e) =>{
+    e.preventDefault();
+    const section = document.querySelector('.newMembers');
+    section.style.display = 'none';
+    const mems = document.querySelectorAll('.add-member');
+    if(section.style.display == 'none') {return (section.style.display ='flex', TweenMax.to(mems, 1, {display: "flex"}) )}
+    //else {return TweenMax.to(mems, 1, {display: "flex"}) }  
+    console.log(section.style.display)
+}
+
+export const showCreate = () =>{
+    
+    const createForm = document.querySelector('.create-form');
+    return TweenMax.to(createForm, 3, {display: "flex", ease: Power1}); 
+}
+    
