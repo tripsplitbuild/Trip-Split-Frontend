@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Trip-Split
-=======
 # Trip Split
 
 Pitch: Tired of paying for a friends uber ride or lunch while on vacation and never getting paid back? Trip split saves the day by keeping track and telling each person they owe money.
@@ -54,6 +51,16 @@ For your project this week, you will demonstrate proficiency by working with a g
 
 You will use your skills to be responsible for the Front End Architecture of this project. You will work directly with the UI Developer and the Back End Developer to ensure that all React components are wired up in proper fashion.
 
+const User = {
+   id: 1,
+   username: 'kingofgames',
+   first_name: 'Yugi',
+   last_name: 'Muto'
+   gender: 'male'
+   tripsOwned: ['disney', 'roadtrip'] 
+   tripsMemberOf: ['']
+ },
+
 #**Back-End**
 - Building RESTful Web APIs with Express and Node.js
 - Server-side Routing`,`Express Middleware
@@ -73,4 +80,3 @@ You will use your skills to be responsible for the Front End Architecture of thi
 ## **Your primary role as a Back-end Architect**
 
 You will use your skills to be responsible for the back-end architecture of this project. You will work closely with your Front End Architect and your Scrum Master in order to discover project needs and deliver working Endpoints for your application.
->>>>>>> dd16c16076b9f666c219910ad08c1378b2e7a983

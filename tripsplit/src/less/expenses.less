@@ -1,0 +1,104 @@
+#expense-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .expense-list{
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        padding: 2%;
+        border: 1px solid blue;
+        font-size: 1rem;
+        margin-top: 1%;     
+        #expense-titles{
+            display: grid;
+            text-align: center;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            text-decoration: underline;
+            border: 1px solid white;
+            h4{
+                grid-row-start: 1;
+                grid-row-end: 1;
+                grid-column-start: 1;
+                grid-column-end: 1;
+                text-decoration: underline;
+                border: 1px solid white;
+
+            }
+            .expense{
+                //grid-row-start: 2;
+                //grid-row-end: 2;
+                grid-column-start: 2;
+                grid-column-end: 2;
+                border: 1px solid red;
+            }
+        }
+        
+        #expense-totals{
+            display: grid;
+            text-align: center;
+            // grid-row-start: 1;
+            // grid-row-end: 1;
+            // grid-column-start: 3;
+            // grid-column-end: 3;
+            // text-decoration: underline;
+            // border: 1px solid yellow;
+            .totals{
+                //grid-row-start: 2;
+                //grid-row-end: 2;
+                grid-column-start: 3;
+                grid-column-end: 3;
+                border: 1px solid black;
+            }
+            
+        }
+    }
+    .member-contributions{
+        font-size: 1rem;
+        border: 1px solid red;
+        width: 80%;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3{
+            margin: 0 auto;
+        }
+        .contribution-list{
+            display: flex;
+            form{
+                display: flex;
+                .expense-entries{
+
+                }
+            }
+            .add-member{
+                form{
+                    display: none;
+                }
+            }
+            
+        }
+        #submit-changes{
+            width: 25%;
+
+            
+        }
+
+        .member{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            text-align: left;
+        }
+        .contribution{
+            grid-column-start: 2;
+            grid-column-end: 2;
+            text-align: left;
+        }
+    }
+}

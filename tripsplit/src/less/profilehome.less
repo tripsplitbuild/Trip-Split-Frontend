@@ -1,0 +1,103 @@
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    //padding: 1%;
+    border-bottom: 1px solid white;
+    h1{
+        width: 100%;        
+        font-size: 3rem;
+        color: white;
+        //padding: 2% 0%;
+    }
+    h3{
+        font-size: 1rem;
+        color: white;
+    }
+}
+.create-trip{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    button{
+        color: white;
+        padding: 1% 5%;
+        font-size: 1rem;
+        font-weight: 800;
+        //width: 100%;
+        border: 1px solid white;
+        background-color: rgba(255,255,255, .2) ; 
+        text-align: center;
+    }
+    
+}
+
+.trip-data{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .trip-owned{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 48%;
+        h4{
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        ul{
+            li{
+                font-size: 1.3rem;
+            }
+            p{
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+            button{
+                color: white;
+                border: 1px solid white;
+                border-radius: 2%;
+                padding: 2% 4%;
+                font-size: 1rem;
+                font-weight: 500;
+                width: 60%;
+            }
+        }
+    }
+    .trip-member{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 48%;                
+        h4{
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        ul{
+            li{
+                font-size: 1.3rem;
+            }
+            p{
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+            button{
+                background-color: transparent;
+                color: white;
+                border: 1px solid white;
+                border-radius: 2%;
+                padding: 2% 4%;
+                font-size: 1rem;
+                font-weight: 500;
+                width: 60%;
+            }
+        }
+    }
+    
+}
